@@ -267,13 +267,10 @@ const FloatingCard = ({ image, fallback, category, title, delay, direction, colo
 
   return (
     <motion.div
-      animate={isMobile ? {} : { y: yValues }}
-      transition={{
-        duration: 8,
-        repeat: Infinity,
-        ease: "easeInOut",
-        delay: delay
-      }}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: delay * 0.2 }}
       className="group relative cursor-pointer"
       onClick={onClick}
     >
@@ -301,7 +298,7 @@ const FloatingCard = ({ image, fallback, category, title, delay, direction, colo
                 target.src = fallback;
               }
             }}
-            className="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-700 ease-out"
+            className="w-full h-full object-cover object-top"
           />
 
           {/* Overlay Info */}

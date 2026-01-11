@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { PACKAGES } from '../constants';
+import { PACKAGES, CONTACT_INFO } from '../constants';
 import { Check, ArrowRight, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { ServicePackage } from '../types';
@@ -95,8 +95,15 @@ const PricingCard: React.FC<PricingCardProps> = ({ pkg, index }) => {
         ))}
       </div>
 
-      <Link to="/contact" className="w-full relative z-10">
-        <button
+      <button
+        onClick={() => {
+          const phoneNumber = CONTACT_INFO.phone.replace(/^0/, '62');
+          const message = encodeURIComponent(`Halo, saya tertarik dengan paket *${pkg.name}*. Bisa minta info lebih lanjut?`);
+          window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+        }}
+        className="w-full relative z-10"
+      >
+        <div
           className={`w-full py-5 rounded-2xl font-bold text-sm tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-2 ${isPremium
             ? 'bg-brand-accent text-black hover:bg-white'
             : 'bg-white/5 text-white hover:bg-white hover:text-black border border-white/10'
@@ -104,8 +111,8 @@ const PricingCard: React.FC<PricingCardProps> = ({ pkg, index }) => {
         >
           Select Plan
           <ArrowRight size={16} />
-        </button>
-      </Link>
+        </div>
+      </button>
     </motion.div>
   );
 };
