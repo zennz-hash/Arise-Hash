@@ -278,7 +278,7 @@ const FloatingCard = ({ image, fallback, category, title, delay, direction, colo
       onClick={onClick}
     >
       {/* Browser Frame Look */}
-      <div className="bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/50 transition-colors duration-500 shadow-2xl">
+      <div className="bg-[#0a0a0a] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/50 transition-colors duration-500 shadow-2xl">
         {/* Browser Header */}
         <div className="h-8 bg-black/20 border-b border-white/5 flex items-center px-4 gap-2">
           <div className="w-2.5 h-2.5 rounded-full bg-red-500/50" />

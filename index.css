@@ -12,6 +12,9 @@
 
     --animate-float: float 8s ease-in-out infinite;
     --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    --animate-pulse-glow: pulse-glow 10s ease-in-out infinite;
+    --animate-blob-1: blob-1 25s linear infinite;
+    --animate-blob-2: blob-2 20s ease-in-out infinite;
 
     @keyframes float {
 
@@ -24,13 +27,62 @@
             transform: translateY(-20px);
         }
     }
+
+    @keyframes pulse-glow {
+
+        0%,
+        100% {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 0.15;
+        }
+
+        50% {
+            transform: translate(-50%, -50%) scale(1.1);
+            opacity: 0.25;
+        }
+    }
+
+    @keyframes blob-1 {
+        0% {
+            transform: translate(0, 0) rotate(0deg);
+        }
+
+        33% {
+            transform: translate(100px, -50px) rotate(45deg);
+        }
+
+        66% {
+            transform: translate(-100px, 50px) rotate(-45deg);
+        }
+
+        100% {
+            transform: translate(0, 0) rotate(0deg);
+        }
+    }
+
+    @keyframes blob-2 {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        33% {
+            transform: translate(-80px, 60px);
+        }
+
+        66% {
+            transform: translate(80px, -60px);
+        }
+
+        100% {
+            transform: translate(0, 0);
+        }
+    }
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 6px;
     height: 6px;
-    /* Added height for horizontal scrollbar */
 }
 
 ::-webkit-scrollbar-track {
@@ -58,7 +110,5 @@
 /* Hide scrollbar for IE, Edge and Firefox */
 .scrollbar-hide {
     -ms-overflow-style: none;
-    /* IE and Edge */
     scrollbar-width: none;
-    /* Firefox */
 }

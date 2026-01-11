@@ -22,7 +22,7 @@ const Navbar = () => {
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className="w-full max-w-5xl relative"
       >
-        <div className="bg-black/40 backdrop-blur-xl border border-white/10 rounded-full px-6 py-3 flex justify-between items-center shadow-2xl shadow-black/50 relative z-20">
+        <div className="bg-[#0a0a0a] border border-white/20 rounded-full px-6 py-3 flex justify-between items-center shadow-2xl shadow-black/50 relative z-20">
           <Link to="/" className="hover:opacity-80 transition-opacity" onClick={() => setIsOpen(false)}>
             <Logo />
           </Link>
