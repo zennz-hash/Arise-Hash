@@ -14,7 +14,7 @@ const WORKS = [
     title: "Wireless Headphone",
     category: "E-commerce",
     // Gambar desain dari user: public/projects/headphone.png
-    image: "/projects/headphone.png",
+    image: "/projects/headphone.webp",
     // Fallback opsional jika gambar lokal gagal load
     fallbackImage: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop",
     color: "bg-red-500",
@@ -25,28 +25,28 @@ const WORKS = [
     id: 2,
     title: "Calcu.Id",
     category: "Artikel Komunitas Edukasi",
-    image: "/projects/calcu.png",
-    fallbackImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
-    color: "bg-blue-100",
-    delay: 2,
+    image: "/projects/calcu.webp",
+    fallbackImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop",
+    color: "bg-emerald-900",
+    delay: 0.2,
     direction: "up"
   },
   {
     id: 3,
     title: "Tama Coffee",
     category: "F&B / Coffee Shop",
-    image: "/projects/coffee.png",
-    fallbackImage: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=800&auto=format&fit=crop",
-    color: "bg-orange-100",
-    delay: 1,
+    image: "/projects/coffee.webp",
+    fallbackImage: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1000&auto=format&fit=crop",
+    color: "bg-orange-900",
+    delay: 0.1,
     direction: "down"
   },
   {
     id: 4,
     title: "Conztru Company",
     category: "Construction & Real Estate",
-    image: "/projects/conztru.png",
-    fallbackImage: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800&auto=format&fit=crop",
+    image: "/projects/conztru.webp",
+    fallbackImage: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=1000&auto=format&fit=crop",
     color: "bg-sky-100",
     delay: 3,
     direction: "down"

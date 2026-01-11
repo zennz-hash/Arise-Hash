@@ -6,7 +6,7 @@ const SmokeBackground = () => {
     <div className="fixed inset-0 z-[-1] overflow-hidden bg-[#030303]">
       {/* Noise Texture */}
       <div className="absolute inset-0 bg-noise opacity-[0.05] pointer-events-none z-20" />
-      
+
       {/* Vignette */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#030303_100%)] z-10" />
 
@@ -21,7 +21,7 @@ const SmokeBackground = () => {
           repeat: Infinity,
           ease: "easeInOut"
         }}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-accent rounded-full blur-[180px] opacity-20"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-accent rounded-full blur-[100px] opacity-20 will-change-transform"
       />
 
       {/* Moving Organic Shapes */}
@@ -36,7 +36,7 @@ const SmokeBackground = () => {
           repeat: Infinity,
           ease: "linear"
         }}
-        className="absolute -top-[20%] -left-[10%] w-[600px] h-[600px] bg-indigo-900/30 rounded-full blur-[120px] mix-blend-screen"
+        className="absolute -top-[20%] -left-[10%] w-[600px] h-[600px] bg-indigo-900/20 rounded-full blur-[80px] will-change-transform"
       />
 
       <motion.div
@@ -50,7 +50,7 @@ const SmokeBackground = () => {
           ease: "easeInOut",
           delay: 2
         }}
-        className="absolute top-[40%] -right-[10%] w-[500px] h-[500px] bg-gray-800/40 rounded-full blur-[100px] mix-blend-screen"
+        className="absolute top-[40%] -right-[10%] w-[500px] h-[500px] bg-gray-800/30 rounded-full blur-[60px] will-change-transform"
       />
     </div>
   );
